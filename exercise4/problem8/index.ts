@@ -1,13 +1,10 @@
 class Calculator {
     value: number;
-
-    constructor(initialValue: number) {
-        this.value = initialValue;
+    constructor(value: number) {
+        this.value = value;
     }
-
     add(num: number){
        return this.value += num;
-        
     }
 
     subtract(num: number) {
@@ -16,9 +13,8 @@ class Calculator {
     }
 
     divide(num: number) {
-        if (num === 0) {
-            console.error("Cannot divide by zero.");
-            return this;
+        if (num == 0) {
+           return "Can not divide by 0!";
         }
        return this.value /= num;
       
