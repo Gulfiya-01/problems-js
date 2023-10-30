@@ -1,34 +1,45 @@
 class Calculator {
-    value: number;
-    constructor(value: number) {
-        this.value = value;
-    }
-    add(num: number){
-       return this.value += num;
-    }
-
-    subtract(num: number) {
-       return this.value -= num;
-       
-    }
-
-    divide(num: number) {
-        if (num == 0) {
-           return "Can not divide by 0!";
-        }
-       return this.value /= num;
-      
-    }
-
-    multiply(num: number){
-        return this.value *= num;
-         
-    }
-
-    logResult():number{
-        
-        return this.value;
-    }
+    result: number;
+     constructor(value: number) {
+         this.result = value;
+     }
+ 
+     add(value: number):this{
+         this.result += value;
+         return this;
+     }
+ 
+     subtract(value: number):this{
+         this.result -= value;
+         return this;
+     }
+ 
+     divide(value: number):this{
+         if (value === 0) {
+             throw new Error("Cannot divide by zero.");
+         }
+         this.result /= value;
+         return this;
+     }
+ 
+     multiply(value: number):this{
+         this.result *= value;
+         return this;
+     }
+ 
+     logResult(){
+       console.log(this.result);
+         return this;
+     }
+ 
 }
+`const calc = new Calculator(10);
 
+calc
+    .add(10)
+    .subtract(5)
+    .divide(5)
+    .multiply(3)
+    .logResult() // logs: 9
+    .add(2)`
 export default Calculator;
