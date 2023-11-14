@@ -1,3 +1,4 @@
-class Timer {}
+class Timer {
+}
 
 export default Timer;

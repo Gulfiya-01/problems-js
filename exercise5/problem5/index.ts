@@ -1,5 +1,11 @@
+
+  
 function wait(ms: number) {
-  // Your code
-}
+  return new Promise((resolve) => {
+    setTimeout(resolve,ms);
+  });
+  }
+     // Your code
+
 
 export default wait;
