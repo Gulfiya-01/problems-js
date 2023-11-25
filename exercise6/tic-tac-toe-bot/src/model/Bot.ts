@@ -10,6 +10,8 @@ class Bot extends Player {
     console.log(board, ownPiece);
   return 0;
   }
+  
 }
 
 export default Bot;
+

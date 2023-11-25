@@ -1,12 +1,15 @@
   import Piece from "../types/Piece.ts";
-import Bot from "./Bot.ts"
+import Bot from "./Bot.ts";
+
   class BotLogic extends Bot{
-    static makeMove(board: Piece[], ownPiece: Piece): number {
+      constructor() {
+          super("Team7","./bot.jpg");
+      }
+      static makeMove(board: Piece[], ownPiece: Piece): number {
 
         const bestMove = this.minimax(board, ownPiece).index;
         return bestMove;
       }
-     
       private static minimax(board: Piece[], player: Piece, depth = 0): { score: number, index: number } {
         const availableMoves = this.getAvailableMoves(board);
     
@@ -67,13 +70,14 @@ import Bot from "./Bot.ts"
         return false;
       }
       
-    move(board: Piece[], ownPiece: Piece): number {
+      move(board: Piece[], ownPiece: Piece): number {
         return BotLogic.makeMove(board, ownPiece);
       }
-    }
+}
+      
+    
+
    
-   
-  
      
 export default BotLogic;
 

@@ -45,6 +45,6 @@ function getPlayers() {
     const slytherinUser = new SlytherinUser();
     const ravenclawUser = new RavenclawUser();
     const hufflepuffUser = new HufflepuffUser();
-    const bot = new BotLogic("Bot","./bot.jpg");
+    const bot = new BotLogic();
     return [gryffindorUser,slytherinUser,ravenclawUser,hufflepuffUser,bot];
 }
