@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../projects/problems-js/exercise5/problem2"
+		},
+		{
+			"path": "../../../lessons-js"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"problems-js"
+		]
+	}
+}

@@ -1,7 +1,9 @@
 // Update it as much as you want, just don't change the name
 class area {
     a:number;
-    Area():number;
+    Area(){
+      return 0;
+    };
     constructor(a:number){
     this.a=a;
  }

@@ -39,7 +39,8 @@ import Bot from "./Bot.ts";
         return board.reduce((moves, cell, index) => (cell === "" ? [...moves, index] : moves), [] as number[]);
       }
     
-      private static getBestMove(moves: { score: number, index: number }[], isMaximizing: boolean): { score: number, index: number } {
+      private static getBestMove(moves: { score: number, index: number }[], isMaximizing: boolean): 
+      { score: number, index: number } {
         const comparator = isMaximizing ? (a: number, b: number) => a > b : (a: number, b: number) => a < b;
     
         let bestMove = { score: isMaximizing ? -Infinity : Infinity, index: -1 };
